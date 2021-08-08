@@ -26,7 +26,7 @@
                                     <span>Current Image</span>
                                 </div>
                                 <div>
-                                    <img
+                                    <img class="img-fluid"
                                         src="/{{ config('app.uploads_folder_url') }}/{{ config('app.image_folder_url') }}/{{ $post->image }}" />
                                 </div>
                             @endif
