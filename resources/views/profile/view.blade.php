@@ -9,7 +9,7 @@
             @php
                 $posts = $user->posts()->get();
             @endphp
-            @if (isset($posts))
+            @if ($posts->count() > 0)
                 @foreach ($posts as $post)
                     <div class="col-12 col-md-3 col-lg-4">
                         <div class="card mb-3" style="max-width: 540px;">
@@ -47,6 +47,9 @@
                         </div>
                     </div>
                 @endforeach
+            @else
+                <p>No Posts. <a class="btn btn-primary" href="{{ route('post.create') }}">Create Post</a>
+                </p>
             @endif
         </div>
     </div>

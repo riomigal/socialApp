@@ -53,7 +53,10 @@
                         @enderror
 
                         <!-- Submit button -->
-                        <button type="submit" class=" btn btn-primary btn-block">Post</button>
+                        <button type="submit" class=" btn btn-primary btn-block">Update</button>
+                        <a class="btn btn-info mt-2 btn-block"
+                            href="{{ route('profile.view', ['profile_url' => auth()->user()->profile_url]) }}">Back to
+                            Profile</a>
                     </form>
                 @endif
             </div>
